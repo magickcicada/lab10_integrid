@@ -17,13 +17,64 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
  
   <!-- CUSTOM STYLES -->
-  <link rel="stylesheet" type="text/css" href="styles/custom.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
 
 </head>
 
 <body>
+  <!-- SINGLE TOP-LEVEL CONTAINER -->
+  <div class="container">
+    
+    <!-- Header, including nested Nav (with default bloack display) -->
+    <header>
+      
+      <!-- Title block -->
+      <div class="site-title">
+        <h1>A Title</h1>
+      </div>
 
+
+      <!-- NAV -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+        <!-- button when collapsed -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- branding: icon & text -->
+        <a class="navbar-brand" href="#!">
+          <img src="images/integrid_icon_master.svg" alt="Integrid Logo">
+          <span class="wordmark">integrid</span>
+        </a>
+        
+        <!-- the actual menu -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#!">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+      <!-- end nav -->
+      </nav>
   
+    <!-- end header -->
+    </header>
+
+
+
+    <!-- MAIN CONTENT i  -->
+
+
+
+
+  <!-- END CONTAINER -->
+  </div> 
 
   <!-- jQuery--this must come first! -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
