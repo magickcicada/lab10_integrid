@@ -10,12 +10,13 @@
   <!-- BOOTSTRAP STYLES -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!-- a Google font -->
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <!-- DAX fonts from Adobe TypeKit -->
+  <link rel="stylesheet" href="https://use.typekit.net/qow4iqp.css">
 
   <!-- FontAwesome -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   <!-- CUSTOM STYLES -->
   <link rel="stylesheet" type="text/css" href="custom.css">
 
@@ -25,50 +26,105 @@
   <!-- SINGLE TOP-LEVEL CONTAINER -->
   <div class="container">
     
-    <!-- Header, including nested Nav (with default bloack display) -->
+    <!-- HEADER AREA ---------------------------------------------------------------------------->
+    <!-- including nested NAV -->
     <header>
       
       <!-- Title block -->
-      <div class="site-title">
-        <h1>A Title</h1>
+      <div class="pl-3 py-3 bg-white">
+          <img class="img-fluid logo" src="images/integrid_wide_master.svg" alt="Integrid Logo">
       </div>
 
 
-      <!-- NAV -->
-      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <!-- NAV ------------------------------------------>
+      <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
 
         <!-- button when collapsed -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-toggler-right border-0" type="button" 
+                data-toggle="collapse" data-target="#navbar-menu" 
+                aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
 
-        <!-- branding: icon & text -->
-        <a class="navbar-brand" href="#!">
-          <img src="images/integrid_icon_master.svg" alt="Integrid Logo">
-          <span class="wordmark">integrid</span>
-        </a>
+        <!-- FA House Icone for Home -->
+        <a class="navbar-brand" href="#!"><span class="fas home">&#xf015;</span></a>
         
         <!-- the actual menu -->
         <div class="collapse navbar-collapse" id="navbar-menu">
           <ul class="navbar-nav mr-auto mt-2 mt-md-0">
             <li class="nav-item">
-              <a class="nav-link" href="#!">About</a>
+              <a class="nav-link" href="#!">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#!">Contact</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!">Support</a>
+              </li>
           </ul>
         </div>
 
-      <!-- end nav -->
       </nav>
+      <!-- end nav ------------------------------------------->
   
-    <!-- end header -->
     </header>
+    <!-- end header ---------------------------------------------------------------------------->
 
 
 
-    <!-- MAIN CONTENT i  -->
+    <!-- MAIN CONTENT ROW  ---------------------------------------------------------------------------->
+    <div class="row">
+
+      <!-- search form -->
+      <div class="col-md-3 my-md-auto mt-3">
+          <div class="input-group align-middle">
+              <div class="input-group-prepend">
+                <button class="btn" type="button"><i class="fas fa-search"></i></button>
+              </div>
+              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+          </div>
+      </div>
+          
+      <!-- card 1 -->
+      <div class="col-md-3 my-3">
+        <div class="card">
+          <div class="card-header">Service Card 1</div>
+          <div class="card-body">
+            <p class="card-text">
+              A lightly- to moderately-detailed description of the service.
+            </p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="col-md-3 my-3">
+          <div class="card">
+            <div class="card-header">Service Card 2</div>
+            <div class="card-body">
+              <p class="card-text">
+                A lightly- to moderately-detailed description of the service.
+              </p>
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
+
+      <!-- card 3 -->
+      <div class="col-md-3 my-3">
+          <div class="card">
+            <div class="card-header">Service Card 3</div>
+            <div class="card-body">
+              <p class="card-text">
+                A lightly- to moderately-detailed description of the service.
+              </p>
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
+
+    </div>
 
 
 
