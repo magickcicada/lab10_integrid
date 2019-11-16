@@ -1,3 +1,4 @@
+/* COLOR VARIABLES =========================================================== */
 :root {
   --primary_dark: rgba(94, 99, 103, 1);
   --primary_light: rgba(216, 219, 220, 1);
@@ -11,119 +12,145 @@
   font-family: ff-dax-pro, sans-serif;
 }
 
-.bg-primary, .text-primary {
+.bg-primary,
+.text-primary {
   background-color: var(--accent) !important;
 }
 
-.bg-secondary, .text-secondary {
+.bg-secondary,
+.text-secondary {
   background-color: var(--accent50) !important;
 }
 
-.bg-light, .text-light {
+.bg-light,
+.text-light {
   background-color: var(--primary_light) !important;
 }
 
-.bg-dark, .text-dark {
+.bg-dark,
+.text-dark {
   background-color: var(--primary_dark) !important;
 }
 
 
-/* HEADER & NAV STUFF ================================================================= */
+/* HEADER & NAV ================================================================= */
 
-/* logo in title div */
-.logo {
-  max-width: 320px;
+/* branding in "title" div */
+.logo-lg {
+  max-height: 72px;
 }
 
-/* make toggler behave like a Bootstrap Button */
-.navbar-toggler {
-  background-color: transparent;
-  border: none;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-}
-
-.navbar-toggler:hover {
-  color: #ffffff;
-  background-color: var(--accent);
-}
-
-.navbar-toggler:focus {
-  color: #ffffff;
-  background-color: var(--accent);
+.logo-sm {
+  max-height: 48px;
 }
 
 
-/* FontAwesome Home icon/button */
-.home {
-  padding: 0.5rem;
-  color: var(--primary_dark);
-  background-color: transparent;
-  border: none;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-}
-
-.home:hover {
-  color: #ffffff;
-  background-color: var(--accent);
-}
-
-.home:focus {
-  color: #ffffff;
-  background-color: var(--accent);
-}
-
-.home:focus-within {
-  color: #ffffff;
-  background-color: var(--accent);
-}
-
-/* nav item & link styling */
+/* nav text & hover/focus behavior */
 .navbar-light .navbar-nav .nav-link {
-  color: var(--primary_dark);
   font-size: 1.2rem;
   font-weight: 600;
-  background-color: transparent;
-  border-radius: 0.25rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  color: var(--primary_dark);
 }
 
+.navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffffff;
   background-color: var(--accent);
-}
-
-.navbar-light .navbar-nav .nav-link:focus {
   color: #ffffff;
-  background-color: var(--accent);
 }
 
 
+/* toggler button */
+.navbar-toggler {
+  background-color: var(--primary_dark);
+}
 
-/* MAIN CONTENT STUFF ================================================================= */
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  background-color: var(--accent);
+}
 
-/* search form focus outline */
+/* primary_light default hamburger (w/ thicker strokes) */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(216, 219, 220, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* white focus/hover hamburger */
+.navbar-light .navbar-toggler-icon:focus,
+.navbar-light .navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* home icon */
+.navbar-light .navbar-brand {
+  color: var(--primary_dark);
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  color: var(--accent);
+}
 
 
-.input-group-prepend > .btn:focus, .form-control:focus {
+
+
+/* MAIN CONTENT (SERVCIES) ================================================================= */
+
+/* search button */
+#services .input-group-prepend .btn {
+  background-color: var(--primary_dark);
+  color: var(--primary_light);
+  border-left: 4px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-color: var(--primary_dark);
+
+}
+
+#services .input-group-prepend .btn:focus,
+#services .input-group-prepend .btn:hover {
+  background-color: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 0 0.2rem var(--accent50);
+  color: #ffffff;
+  box-shadow: none;
 }
 
-.card-header, .card-footer {
+/* search text field */
+#services .form-control {
+  border-right: 4px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-color: var(--primary_light);
+}
+
+#services .form-control:focus,
+#services .form-control:hover {
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+
+/* service cards */
+#services .card-header,
+#services .card-footer {
   background-color: var(--accent);
   color: #ffffff;
 }
 
-.card-header {
+#services .card-header {
   border-bottom: none;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.card-footer {
+#services .card-footer {
   border-top: none;
 }
+
+
+
+
+
+
+
+
+/* SECONDARY CONTENT (CONTACT) ================================================================= */

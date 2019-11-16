@@ -8,7 +8,8 @@
   <title>Lambert Lab 10: Bootstrap</title>
 
   <!-- BOOTSTRAP STYLES -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- DAX fonts from Adobe TypeKit -->
   <link rel="stylesheet" href="https://use.typekit.net/qow4iqp.css">
@@ -25,70 +26,138 @@
 <body>
   <!-- SINGLE TOP-LEVEL CONTAINER -->
   <div class="container">
-    
-    <!-- HEADER AREA ---------------------------------------------------------------------------->
-    <!-- including nested NAV -->
-    <header>
-      
-      <!-- Title block -->
-      <div class="pl-3 py-3 bg-white">
-          <img class="img-fluid logo" src="images/integrid_wide_master.svg" alt="Integrid Logo">
+
+    <!-- =========================== HEADER ===================================================== -->
+    <header class="sticky-top">
+
+      <div class="col-12 pl-3 py-3 bg-white">
+        <img class="img-fluid logo-sm d-lg-none" src="images/integrid_wide_master.svg" alt="Integrid Logo">
+        <!-- large logo on desktop view -->
+        <img class="img-fluid logo-lg d-none d-lg-inline" src="images/integrid_wide_master.svg" alt="Integrid Logo">
       </div>
+    
 
 
-      <!-- NAV ------------------------------------------>
-      <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+
+      <!-- =========================== NAV ====================================================== -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
 
         <!-- button when collapsed -->
-        <button class="navbar-toggler navbar-toggler-right border-0" type="button" 
-                data-toggle="collapse" data-target="#navbar-menu" 
-                aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
+        <button class="navbar-toggler navbar-toggler-right mx-3 my-2" type="button" data-toggle="collapse"
+          data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- FA House Icone for Home -->
-        <a class="navbar-brand" href="#!"><span class="fas home">&#xf015;</span></a>
         
+        <!-- FA House Icon for Home -->
+        <a class="navbar-brand mx-3" href="#top"><span class="fas">&#xf015;</span></a>
+
         <!-- the actual menu -->
         <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#!">Services</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link px-3 px-lg-2 py-lg-3" href="#services">Services</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#!">Contact</a>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link px-3 px-lg-2 py-lg-3" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#!">Support</a>
-              </li>
+            <li class="nav-item rounded" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link px-3 px-lg-2 py-lg-3" href="#support">Support</a>
+            </li>
           </ul>
         </div>
+        
 
       </nav>
-      <!-- end nav ------------------------------------------->
-  
-    </header>
-    <!-- end header ---------------------------------------------------------------------------->
+      <!-- =========================== end nav ====================================================== -->
+
+
+  </header>
+  <!-- =========================== end header ================================================ -->
 
 
 
-    <!-- MAIN CONTENT ROW  ---------------------------------------------------------------------------->
-    <div class="row">
+
+
+    <!-- =========================== MAIN CONTENT (SERVICES) ================================== -->
+    <div class="row bg-white" id="services">
 
       <!-- search form -->
-      <div class="col-md-3 my-md-auto mt-3">
-          <div class="input-group align-middle">
-              <div class="input-group-prepend">
-                <button class="btn" type="button"><i class="fas fa-search"></i></button>
-              </div>
-              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+      <div class="col-lg-3 my-lg-auto mt-3">
+        <div class="input-group align-middle">
+          <div class="input-group-prepend">
+            <button class="btn" type="button"><i class="fas fa-search"></i></button>
           </div>
+          <input type="text" class="form-control py-4" placeholder="Search"
+                 aria-label="Search" aria-describedby="">
+        </div>
       </div>
-          
+
+      <!-- --------------------------- CARDS ------------------------------------------------- -->
+      <!-- Note: Use flex properties in desktop (lg) view for consistent heights -->
+
       <!-- card 1 -->
-      <div class="col-md-3 my-3">
+      <div class="col-lg-3 my-lg-5 my-3 d-lg-inline-flex align-self-lg-stretch">
         <div class="card">
           <div class="card-header">Service Card 1</div>
+          <div class="card-body">
+            <p class="card-text">
+              A lightly- to moderately-detailed description of the service. Quis eleifend quam adipiscing vitae proin.
+              Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Lorem mollis aliquam ut porttitor.
+              Gravida quis blandit turpis cursus in.
+            </p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="col-lg-3 my-lg-5 my-3 d-lg-inline-flex align-self-lg-stretch">
+        <div class="card">
+          <div class="card-header">Service Card 2</div>
+          <div class="card-body">
+            <p class="card-text">
+              A lightly- to moderately-detailed description of the service.
+            </p>
+            <ul>
+              <li>Maybe with some</li>
+              <li>Bullet points</li>
+              <li>To keep the content</li>
+              <li>More skim-friendly</li>
+            </ul>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="col-lg-3 my-lg-5 my-3 d-lg-inline-flex align-self-lg-stretch">
+        <div class="card">
+          <div class="card-header">Service Card 3</div>
+          <div class="card-body">
+            <h4 class="card-title">Or With A Title</h4>
+            <p class="card-text">
+              To keep the paragraph text more manageable. Nisl purus in mollis nunc sed id semper. Eget lorem dolor
+              sed viverra. Ut consequat semper viverra nam libero. Dui nunc mattis enim ut tellus.
+            </p>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- =========================== end main content ============================================= -->
+
+
+
+
+
+
+    <!-- =========================== SECONDARY CONTENT (Contact) ================================== -->
+    <div class="row bg-white" id="contact">
+
+      <div class="col-12 my-5">
+        <div class="card">
+          <div class="card-header">Contact</div>
           <div class="card-body">
             <p class="card-text">
               A lightly- to moderately-detailed description of the service.
@@ -98,46 +167,29 @@
         </div>
       </div>
 
-      <!-- card 2 -->
-      <div class="col-md-3 my-3">
-          <div class="card">
-            <div class="card-header">Service Card 2</div>
-            <div class="card-body">
-              <p class="card-text">
-                A lightly- to moderately-detailed description of the service.
-              </p>
-            </div>
-            <div class="card-footer"></div>
-          </div>
-        </div>
-
-      <!-- card 3 -->
-      <div class="col-md-3 my-3">
-          <div class="card">
-            <div class="card-header">Service Card 3</div>
-            <div class="card-body">
-              <p class="card-text">
-                A lightly- to moderately-detailed description of the service.
-              </p>
-            </div>
-            <div class="card-footer"></div>
-          </div>
-        </div>
-
     </div>
+    <!-- =========================== end secondary content ================================== -->
 
 
 
+  </div>
+  <!-- =========================== END CONTAINER ============================================= -->
 
-  <!-- END CONTAINER -->
-  </div> 
 
+
+  <!-- ====================== BOOTSTRAP JS STUFF  ============================================ -->
   <!-- jQuery--this must come first! -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <!-- popper.js--a library of drop-down and pop-up JavaScript scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <!-- unique Bootstrap 4 JavaScript scripts -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 </body>
 
