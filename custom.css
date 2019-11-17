@@ -16,11 +16,18 @@
 
 
 /* GENERAL OVERRRIDES ======================================================= */
+
+/* Branding Typography
+    Available weights/styles:
+    400 (Regular): Normal/Italic
+    600 (Medium): Normal/Italic
+    800 (Extra Bold): Normal/Italic
+*/
 .container {
   font-family: ff-dax-pro, sans-serif;
 }
 
-
+/* change defaulr background colors */
 .bg-primary {
   background-color: var(--accent) !important;
 }
@@ -34,6 +41,7 @@
 }
 
 
+/* change primary button behavior. (only button class needed for now) */
 .btn-primary {
   background-color: var(--accent);
   color: #ffffff;
@@ -67,7 +75,7 @@
   box-shadow: 0 0 0 0.2rem var(--accent50);
 }
 
-
+/* change form field outline colors */
 .form-control {
   border: 1px solid var(--primary_dark);
 }
@@ -118,7 +126,6 @@
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-
 /* home icon */
 .navbar-light .navbar-brand {
   color: var(--primary_dark);
@@ -154,10 +161,6 @@
 
 
 
-
-
-
-
 /* SECONDARY & TERTIARY CONTENT (CONTACT & SUPPORT ) =========================================== */
 #contact .card-header,
 #contact .card-footer,
@@ -178,7 +181,3 @@
 #support .card-body {
   background-color: var(--primary_light);
 }
-
-
-
-
