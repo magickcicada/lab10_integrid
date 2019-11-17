@@ -81,15 +81,19 @@
     <!-- =========================== MAIN CONTENT (SERVICES) ================================== -->
     <div class="row bg-white" id="services">
 
-      <!-- search form -->
-      <div class="col-lg-3 my-lg-auto mt-3">
-        <form class="form-inline">
-          <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
-          <label class="sr-only" for="search">Search</label>
-          <input type="text" class="form-control ml-2" id="search"
-                 placeholder="Search" aria-label="search" aria-describedby="search">
-        </form>
+      <!-- search bar -->
+      <div class="input-group col-lg-3 my-auto" id="search-bar">
+        <div class="input-group-prepend">
+          <button class="btn btn-primary" type="button" id="search-btn">
+            <!-- invisible screen reader span since using icon as button "text" -->
+            <span class="sr-only">Search Button</span>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <input type="text" class="form-control" id="search-field" placeholder="Search" 
+               aria-label="search field" aria-describedby="search-btn">
       </div>
+      
 
       <!-- --------------------------- CARDS ------------------------------------------------- -->
       <!-- Note: Use flex properties in desktop (lg) view for consistent heights -->
