@@ -158,19 +158,27 @@
 
 
 
-/* SECONDARY CONTENT (CONTACT) ================================================================= */
+/* SECONDARY & TERTIARY CONTENT (CONTACT & SUPPORT ) =========================================== */
 #contact .card-header,
-#contact .card-footer {
+#contact .card-footer,
+#support .card-header,
+#support .card-footer {
   background-color: var(--primary_dark);
   color: #ffffff;
 }
 
-#contact .card-header {
+#contact .card-header,
+#support .card-header {
   border-bottom: none;
-  font-size: 1.33rem;
+  font-size: 1.67rem;
   font-weight: 600;
 }
 
-#contact .card-body {
+#contact .card-body,
+#support .card-body {
   background-color: var(--primary_light);
 }
+
+
+
+
