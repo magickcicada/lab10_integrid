@@ -210,6 +210,103 @@
 
 
 
+
+
+
+
+    <!-- =========================== TERTIARY CONTENT (SUPPORT) ================================== -->
+    <div class="row no-gutters my-5 bg-white" id="support">
+      <div class="card w-100">
+          <div class="card-header">Support</div>
+          <div class="card-body">
+            <div class="row">
+
+              <!-- NEW TICKET FORM =========================================================== -->
+              <div class="col-lg-6">
+                <h4>Start a New Service Ticket</h4>
+                <p>We just need a couple things to get started:</p>
+                <form autocomplete="off">
+                  
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="sr-only" for="lead_first_name">First name</label>
+                        <input class="form-control" maxlength="255"
+                               placeholder="First Name" size="255" type="text" name="lead[first_name]" id="lead_first_name" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="sr-only" for="lead_last_name">Last name</label>
+                        <input class="form-control" maxlength="255"
+                               placeholder="Last Name" size="255" type="text" name="lead[last_name]" id="lead_last_name" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="sr-only" for="lead_phone">Phone</label>
+                    <input class="form-control" maxlength="255"
+                           placeholder="Phone" type="tel" size="255" name="lead[phone]" id="lead_phone" />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="sr-only" for="lead_email">Email</label>
+                    <input class="form-control" maxlength="255"
+                           placeholder="Email" type="email" size="255" name="lead[email]" id="lead_email" />
+                  </div>
+        
+                  <input type="submit" name="commit" value="Get Started" class="btn btn-primary"
+                         data-disable-with="Get Started" />
+                </form>
+              </div>
+              <!-- end new ticket form ==================================================================== -->
+
+
+              <!-- EXISTING TICKET FORM ===================================================================== -->
+              <div class="col-lg-6 mt-lg-0 mt-5">
+                <h4>Existing Ticket Lookup</h4>
+                <p>Just enter your info to do a search.</p>
+                <form autocomplete="off">
+                    
+                  <div class="form-group">
+                      <label class="sr-only" for="check_existing_ticket_number">Ticket number</label>
+                      <input class="form-control" placeholder="Ticket Number: eg, 1234" 
+                        type="text" name="check_existing[ticket_number]"
+                        id="check_existing_ticket_number" />
+                    </div>
+
+                  <div class="form-group">
+                    <label class="sr-only" for="check_existing_last_name">Last name</label>
+                    <input class="form-control" placeholder="Last Name" type="text" 
+                          name="check_existing[last_name]" id="check_existing_last_name" />
+                  </div>
+
+                  <input type="submit" name="commit" value="Lookup" class="btn btn-primary"
+                    data-disable-with="Lookup" />
+                </form>
+              </div>
+              <!-- end existing ticket form ======================================================== -->
+
+
+
+              </div>
+          </div>
+          <div class="card-footer"></div>
+      </div>
+    </div>
+    <!-- ======================= end tertiary content (support) ========================= -->
+  
+
+
+
+
+
+
+
+
+
+
   </div>
   <!-- =========================== END CONTAINER ============================================= -->
 
